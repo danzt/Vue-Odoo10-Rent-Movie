@@ -1,0 +1,55 @@
+<odoo>
+    <data>
+        <record model="ir.actions.act_window" id="action_window_category">
+            <field name="name">Category</field>
+            <field name="res_model">mr.category</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record model="ir.actions.act_window" id="action_window_movie">
+            <field name="name">Create new Movie</field>
+            <field name="res_model">mr.movie</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record model="ir.actions.act_window" id="action_window_type">
+            <field name="name">Create new Type</field>
+            <field name="res_model">mr.type</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record model="ir.actions.act_window" id="action_window_rental">
+            <field name="name">Rental</field>
+            <field name="res_model">mr.rental</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem
+                name="Movie Rental"
+                id="menu_root"/>
+
+        <menuitem
+                name="Movie Rental" id="categories_menu_1"
+                parent="menu_root"/>
+
+        <menuitem name="Movie"
+                  id="action_movies"
+                  parent="categories_menu_1"
+                  action="action_window_movie"/>
+
+        <menuitem name="Categories"
+                  id="action_categories"
+                  parent="categories_menu_1"
+                  action="action_window_category"/>
+
+        <menuitem name="Select Types"
+                  id="action_types"
+                  parent="categories_menu_1"
+                  action="action_window_type"/>
+
+        <menuitem name="Rental"
+                  id="action_rental"
+                  parent="categories_menu_1"
+                  action="action_window_rental"/>
+    </data>
+</odoo>

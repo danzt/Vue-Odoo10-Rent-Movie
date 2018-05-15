@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+  <data>
+    <template id="index" name="index">
+      <html>
+        <head>
+          <t t-call="movie_rental.assets_css" />
+          <title>movie_rental</title>
+        </head>
+        <body>
+          <div id="app"></div>
+          <t t-call="movie_rental.assets_js" />
+        </body>
+      </html>
+    </template>
+  </data>
+</odoo>

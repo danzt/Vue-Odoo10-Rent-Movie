@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="movie_tree">
+            <field name="name">mr.movie</field>
+            <field name="model">mr.movie</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="descripcion"/>
+                    <field name="category_ids"/>
+                    <field name="type_ids"/>
+                    <field name="year"/>
+                    <field name="year"/>
+                    <field name="image"/>
+                    <field name="price"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="movie_form">
+            <field name="name">mr.movie</field>
+            <field name="model">mr.movie</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="descripcion"/>
+                        </group>
+                        <group>
+                            <field name="image"/>
+                            <field name="year"/>
+                            <field name="price"/>
+                        </group>
+                        <group>
+                            <notebook>
+                                <field name="type_ids"/>
+                                <field name="category_ids"/>
+                            </notebook>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>
