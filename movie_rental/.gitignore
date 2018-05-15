@@ -7,6 +7,7 @@
 *.iml
 out
 gen
+/node_module/
 .idea/inspectionProfiles/
 .idea/modules.xml
 .idea/vcs.xml
